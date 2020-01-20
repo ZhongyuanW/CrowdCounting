@@ -146,9 +146,9 @@ class Dataset(Dataset):
 
         if DIVIDE:
             img, gt_dmap = divideByfactor(img,gt_dmap,DIVIDE)
-        if RANDOM_2GRAY:
+        if (self.phase == "train") and RANDOM_2GRAY:
             img,gt_dmap = random_2gray(img,gt_dmap,RANDOM_2GRAY)
-        if RANDOM_FLIP:
+        if (self.phase == "train") and RANDOM_FLIP:
             img,gt_dmap = random_flip(img,gt_dmap,RANDOM_FLIP)
 
         if self.gt_downsample > 1:  # to downsample image and density-map to match deep-model.
