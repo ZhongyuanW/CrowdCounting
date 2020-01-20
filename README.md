@@ -1,2 +1,2 @@
 # CrowdCounting
-some models reproduction in Crowd Counting.
+some models reproduction in Crowd Counting by pytorch.
